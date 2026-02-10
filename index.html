@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pilih Satu</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 80px;
+    }
+
+    button {
+      padding: 12px 28px;
+      border-radius: 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      position: absolute;
+    }
+
+    #btnTidak {
+      background: #ff6b6b;
+      color: white;
+      left: 0;
+    }
+
+    #btnYa {
+      background: #4caf50;
+      color: white;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Apakah kamu sayang aku MasRid? Pilih satu.</h2>
+
+    <div class="buttons">
+      <button id="btnTidak">Tidak</button>
+      <button id="btnYa">Ya</button>
+    </div>
+  </div>
+
+  <script>
+    const btnTidak = document.getElementById("btnTidak");
+    const btnYa = document.getElementById("btnYa");
+
+    btnTidak.addEventListener("mouseover", () => {
+      const maxX = 250;
+      const maxY = 50;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      btnTidak.style.left = x + "px";
+      btnTidak.style.top = y + "px";
+    });
+
+    btnYa.addEventListener("click", () => {
+      alert("Aku juga sayang MbSal ❤️");
+    });
+  </script>
+
+</body>
+</html>
